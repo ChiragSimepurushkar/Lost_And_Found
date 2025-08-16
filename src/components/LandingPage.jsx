@@ -171,10 +171,10 @@ const LandingPage = () => {
                                     The easiest way to recover lost items or report found ones on campus. Connect with your community and help each other out.
                                 </p>
                                 <div className="flex flex-wrap gap-4 pt-4">
-                                    <a href="lost.html" className="px-6 py-3 bg-white text-primary-700 font-medium rounded-md hover:bg-gray-100 transition-colors">
+                                    <a href="lost.html" className="px-6 py-3 bg-white text-black font-medium rounded-md hover:bg-gray-100 transition-colors">
                                         Report Lost Item
                                     </a>
-                                    <a href="found.html" className="px-6 py-3 bg-primary-800 text-white font-medium rounded-md hover:bg-primary-900 transition-colors">
+                                    <a href="found.html" className="px-6 py-3 bg-primary-800 text-black font-medium rounded-md hover:bg-primary-900 transition-colors">
                                         Report Found Item
                                     </a>
                                 </div>
