@@ -1,13 +1,408 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* --- Global Variables & Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    --primary-color: #5d53c3;
+    --primary-light: #7b68ee;
+    --secondary-color: #6c757d;
+    --accent-color: #f7b731;
+    --heading-color: #1a202c;
+    --text-color: #4a5568;
+    --bg-light: #f7f9fc;
+    --white-color: #ffffff;
+    --border-color: #e2e8f0;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* --- Base Styles & Typography --- */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+    line-height: 1.6;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--heading-color);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-light);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    border: none;
+    color: var(--white-color);
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(93, 83, 195, 0.3);
+}
+
+.btn-primary:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(93, 83, 195, 0.4);
+}
+
+/* --- Core Layout & Components --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section-spacing {
+    padding: 6rem 0;
+}
+
+/* --- Navbar --- */
+.navbar {
+    padding: 1rem 0;
+    background-color: var(--white-color) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    box-shadow: var(--shadow-light);
+}
+
+.navbar-brand img {
+    height: 45px;
+    width: auto;
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    font-weight: 500;
+    margin-left: 1.5rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: var(--primary-color);
+    transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+    left: 0;
+    background: var(--primary-color);
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--white-color) !important;
+    padding: 4rem 0 2rem 0;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.95rem;
+}
+
+.footer-logo {
+    margin-bottom: 1rem;
+}
+
+.footer h5 {
+    color: var(--heading-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.footer a.link {
+    color: var(--secondary-color) !important;
+    display: block;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
+}
+
+.footer a.link:hover {
+    color: var(--primary-color) !important;
+}
+
+.footer-disclaimer p {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    line-height: 1.5;
+}
+
+/* --- HomePage Components --- */
+/* Hero */
+.hero-section {
+    padding: 8rem 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+.hero-img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-medium);
+    margin-top: 3rem;
+}
+
+/* How It Works */
+.how-it-works {
+    text-align: center;
+}
+
+.how-it-works h2 {
+    margin-bottom: 3rem;
+}
+
+.how-it-works-item {
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.how-it-works-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-light);
+    border-radius: 1rem;
+}
+
+.how-it-works-item img {
+    height: 80px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+/* Stats */
+.stats-section .row {
+    align-items: center;
+}
+
+.stats-section h1 {
+    font-size: 2.25rem;
+}
+
+.stats-section h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stats-section p {
+    color: var(--secondary-color);
+}
+
+.campus-map-illustration {
+    width: 90%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-medium);
+}
+
+/* Features */
+.features-section h1 {
+    font-size: 2.25rem;
+}
+
+.feature-box {
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    background-color: var(--white-color);
+    box-shadow: var(--shadow-light);
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Community */
+.community-section .row {
+    align-items: center;
+}
+
+.community-illustration {
+    width: 80%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.community-illustration:hover {
+    transform: scale(1.05);
+}
+
+/* --- AboutPage Components --- */
+.about-hero h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 2;
+    color: var(--secondary-color);
+}
+
+.team-member-card {
+    background-color: var(--white-color);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-light);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.team-member-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* --- SupportPage Components --- */
+#supporthero {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 6rem 0 4rem 0;
+}
+
+#supporthero h1 {
+    font-size: 2rem;
+    color: var(--white-color);
+}
+
+#supporthero a {
+    color: var(--white-color);
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+#supporthero input {
+    border: none;
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    color: var(--text-color);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-topic-card {
+    background-color: var(--white-color);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-light);
+    padding: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ticket-topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.ticket-topic-card h4 {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.ticket-topic-card h4 i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.ticket-topic-card a {
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.ticket-topic-card a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .stats-section .row,
+    .community-section .row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    .navbar-brand img { height: 35px; }
+
+    .hero-section {
+        padding: 4rem 0;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .how-it-works-item {
+        padding: 1rem;
+    }
+    .stats-section .col-6,
+    .community-section .col {
+        padding: 1rem;
+    }
+    .footer .row {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-primary {
+        width: 100%;
+    }
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
