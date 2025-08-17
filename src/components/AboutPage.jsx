@@ -189,7 +189,7 @@ const AboutPage = () => {
                                 <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow group">
                                     <div className="h-48 bg-gray-200 relative overflow-hidden">
                                         <img
-                                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+                                            src="media/images/Manjunath.jpg"
                                             alt="Manjunath Gavda"
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                         />
