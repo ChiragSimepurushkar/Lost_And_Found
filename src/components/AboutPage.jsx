@@ -112,7 +112,7 @@ const AboutPage = () => {
                                 <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow group">
                                     <div className="h-48 bg-gray-200 relative overflow-hidden">
                                         <img
-                                            src="https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80"
+                                            src="media/images/me7.jpg"
                                             alt="Chirag Simepurushkar"
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                         />
@@ -138,7 +138,7 @@ const AboutPage = () => {
                                 <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow group">
                                     <div className="h-48 bg-gray-200 relative overflow-hidden">
                                         <img
-                                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+                                            src="media/images/deepangsh.jpg"
                                             alt="Deepanghsh Naik"
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                         />
@@ -154,7 +154,7 @@ const AboutPage = () => {
                                     </div>
                                     <div className="p-4 text-center">
                                         <h3 className="font-bold text-lg text-gray-800">Deepanghsh Naik</h3>
-                                        <p className="text-primary-600 text-sm mb-2">Co-Founder & UI/UX Designer</p>
+                                        <p className="text-primary-600 text-sm mb-2">frontend Developer</p>
                                         <p className="text-gray-600 text-sm">
                                             Focused on creating intuitive user experiences that make reporting lost
                                             items simple.
@@ -164,7 +164,7 @@ const AboutPage = () => {
                                 <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow group">
                                     <div className="h-48 bg-gray-200 relative overflow-hidden">
                                         <img
-                                            src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80"
+                                            src="media/images/Austen.jpg"
                                             alt="Austen Gomes"
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                         />
@@ -180,7 +180,7 @@ const AboutPage = () => {
                                     </div>
                                     <div className="p-4 text-center">
                                         <h3 className="font-bold text-lg text-gray-800">Austen Gomes</h3>
-                                        <p className="text-primary-600 text-sm mb-2">Backend Developer</p>
+                                        <p className="text-primary-600 text-sm mb-2">UI/UX Designer</p>
                                         <p className="text-gray-600 text-sm">
                                             Building robust systems to handle item reporting and matching algorithms.
                                         </p>
@@ -242,7 +242,7 @@ const AboutPage = () => {
                                 </div>
                             </div>
                             <div className="mt-10 text-center">
-                                <a href="#" className="inline-block px-6 py-3 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-150">
+                                <a href="#" className="inline-block px-6 py-3 bg-primary-600 text-black rounded-md hover:bg-primary-700 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-150">
                                     Contact Our Team
                                 </a>
                             </div>

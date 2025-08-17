@@ -109,7 +109,7 @@ const Signup= () => {
                 </div>
                 <button
                     type="submit"
-                    className="w-full py-3 bg-primary-600 text-white rounded-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors font-medium shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all"
+                    className="w-full py-3 bg-primary-600 text-black rounded-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors font-medium shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all"
                 >
                     Sign In
                 </button>
@@ -225,7 +225,7 @@ const Signup= () => {
                 </div>
                 <button
                     type="submit"
-                    className="w-full py-3 px-4 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transform hover:-translate-y-0.5 transition-all duration-150"
+                    className="w-full py-3 px-4 bg-primary-600 hover:bg-primary-700 text-black font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transform hover:-translate-y-0.5 transition-all duration-150"
                 >
                     Create account
                 </button>
